@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using LogicLibrary;
 
 namespace Module3_first
 {
@@ -12,17 +13,34 @@ namespace Module3_first
         static void Main(string[] args)
         {
             // существует 3 типа станков: токарный, сверлильный, шлифовальный.
-            // ввод планирую осуществить в отдельном классе, к примеру создать Invoker, реализующий логику приложения
-            // ввод параметров сделать как-то так: Name = Console.ReadLine(); int.Parse(ReadLine()) для интового,
-            // и перед этими вводами сделать writeline'ы, которые спрашивают что вводить
-            //Collection.Invoker();
+            // разобраться как выводить коллекцию из другого метода(2 вариант в меню)
+            // создать потоки, управляющие отправкой станков на работу(3 вариант в меню)
 
-            // типы работ захардкодить?
+            Console.WriteLine("What a you going to do?(сhoose number)");
+            Console.WriteLine("1 - enter machine\n2 - see all machines\n3 - work\n4 - exit program");
+            var mainmenu = Console.ReadLine();
 
-            Console.WriteLine("What a you going to do?(сhoose number)"); // пока не придумал какие действия сделаю в меню
-            var mainmenu = Console.ReadLine(); // для будущего switch-case
+            while(true)
+            {
+                switch (mainmenu)
+                {
+                    case "1":
+                        Invoker.EnterOfMachine();
+                        break;
 
-            Console.ReadKey();
+                    case "2":
+
+                        break;
+
+                    case "3":
+
+                        break;
+
+                    case "4":
+                        return;
+
+                }
+            }
         }
     }
 }
