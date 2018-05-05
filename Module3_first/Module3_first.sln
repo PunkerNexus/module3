@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3_first", "Module3_first\Module3_first.csproj", "{FF59BA63-FB9B-4D29-8525-E1074C0C1AD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3_first", "Module3_first\Module3_first.csproj", "{65201109-5998-4CCF-963A-840C5582246A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLibrary", "LogicLibrary\LogicLibrary.csproj", "{B35C46D9-2188-4251-91E9-544EE4E61260}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF59BA63-FB9B-4D29-8525-E1074C0C1AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF59BA63-FB9B-4D29-8525-E1074C0C1AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF59BA63-FB9B-4D29-8525-E1074C0C1AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF59BA63-FB9B-4D29-8525-E1074C0C1AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65201109-5998-4CCF-963A-840C5582246A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65201109-5998-4CCF-963A-840C5582246A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65201109-5998-4CCF-963A-840C5582246A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65201109-5998-4CCF-963A-840C5582246A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35C46D9-2188-4251-91E9-544EE4E61260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35C46D9-2188-4251-91E9-544EE4E61260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35C46D9-2188-4251-91E9-544EE4E61260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35C46D9-2188-4251-91E9-544EE4E61260}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
