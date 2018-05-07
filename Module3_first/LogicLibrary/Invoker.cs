@@ -6,23 +6,52 @@ namespace LogicLibrary
 {
     public class Invoker
     {
-        public static void Tasks() // for thread in case 3(program)
-        {
+        public static List<Machines> machines = new List<Machines>();
 
+        public static void WorkForMach()
+        {
+            foreach (var mechs in machines)
+            {
+                var thread = new Thread(machin => MachineLoad(machin as Machines));
+                thread.Start(mechs);
+            }
         }
 
-        //public static void Show()
-        //{
-        //    foreach (var mech in machines)
-        //    {
-        //        Console.WriteLine(mech);
-        //    }
-        //}
+        private static Random Random = new Random();
+
+        public static void MachineLoad(Machines machines)
+        {
+            //попытка реализовать нагрузку без рандома
+            //var powerg = ForWriting("Enter power which will load machine: ", x => Convert.ToInt32(x));
+            while (true)
+            {
+                var powerg = Random.Next(0, machines.Power + 15);
+
+                Console.WriteLine($"Machine {machines.Name}. Load on the machine: {powerg}");
+                if (powerg > machines.Power)
+                {
+                    Console.WriteLine($"Machine broke down: {machines.Name}");
+                    return;
+                }
+
+                Thread.Sleep(1000);
+                //powerg += powerg;
+            }
+        }
+
+        public static void Show()
+        {
+            foreach (var mech in machines)
+            {
+                Console.Write($"Name - {mech.Name}, ");
+                Console.Write($"type of work - {mech.TypeWork}, ");
+                Console.Write($"type of machine - {mech.TypeMachine}, ");
+                Console.WriteLine($"power -  {mech.Power}");
+            }
+        }
 
         public static void EnterOfMachine()
         {
-            List<Machines> machines = new List<Machines>();
-
             string name = null;
             string typeWork = null;
             string typeMachine = null;
