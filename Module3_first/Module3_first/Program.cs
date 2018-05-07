@@ -12,16 +12,12 @@ namespace Module3_first
     {
         static void Main(string[] args)
         {
-            // существует 3 типа станков: токарный, сверлильный, шлифовальный.
-            // разобраться как выводить коллекцию из другого метода(2 вариант в меню)
-            // создать потоки, управляющие отправкой станков на работу(3 вариант в меню)
-
-            Console.WriteLine("What a you going to do?(сhoose number)");
-            Console.WriteLine("1 - enter machine\n2 - see all machines\n3 - work\n4 - exit program");
-            var mainmenu = Console.ReadLine();
-
             while(true)
             {
+                Console.WriteLine("What a you going to do?(сhoose number)");
+                Console.WriteLine("1 - enter machine\n2 - see all machines\n3 - work\n4 - exit program");
+                string mainmenu = Console.ReadLine();
+
                 switch (mainmenu)
                 {
                     case "1":
@@ -29,17 +25,21 @@ namespace Module3_first
                         break;
 
                     case "2":
-
+                        Invoker.Show();
                         break;
 
                     case "3":
-
+                        Invoker.WorkForMach();
                         break;
 
                     case "4":
                         return;
+                    default:
+                        Console.WriteLine("\nInput error, try again\n");
+                        break;
 
                 }
+                //Console.Clear();
             }
         }
     }
